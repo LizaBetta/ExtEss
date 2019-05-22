@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Quill ExtEssay</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.quilljs.com/1.3.1/quill.bubble.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.css"
+          integrity="sha384-b/NoaeRXkMxyKcrDw2KtVtYKkVg3dA0rTRgLoV7W2df3MzeR1eHLTi+l4//4fMwk" crossorigin="anonymous">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .controls button {
+            margin: 3px 5px;
+        }
+
+        .container {
+            max-width: 90%;
+            width: 100%;
+            height: 100%;
+            align-self: center;
+            margin-bottom: 20px;
+        }
+
+        /* override some quill styles */
+        .ql-toolbar.ql-snow {
+            padding: 3px 0 0 0;
+            text-align: right;
+        }
+
+        .ql-editor {
+            height: 100%;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        tr.part > td {
+            border-top: 1px dashed #cecece;
+            border-bottom: 1px dashed #cecece;
+            border-right: 1px dashed #cecece;
+        }
+
+        .controls {
+            width: 100%;
+        }
+
+        .tbl-parts,
+        .tbl-paragraphs,
+        .tbl-paragraph-content {
+            width: 100%;
+        }
+
+        .controls {
+            padding: 5px;
+        }
+
+        .component-container {
+            border: 1px dotted #cecece;
+        }
+
+        .block-info {
+            margin: 5px 0;
+        }
+
+        .nav-col {
+            vertical-align: top;
+            width: 55px;
+            text-align: center;
+            border-right: 1px dashed #cecece;
+            border-left: 1px dashed #cecece;
+        }
+
+        .nav-col button {
+            width: 25px;
+            margin: 2px;
+        }
+
+    </style>
+</head>
+
+<body data-gr-c-s-loaded="true">
+<div id="app" class="container">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.js"
+            integrity="sha384-ern5NCRqs6nJ/a4Ik0nB9hnKVH5HwV2XRUYdQl09OB/vvd1Lmmqbg1Mh+mYUclXx"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.quilljs.com/1.3.1/quill.js"></script>
+    <script src="https://rawgit.com/abdmob/x2js/master/xml2json.js"></script>
+    <script src="dist/app.min.js"></script>
+    <script>
+        let app = new App(document.getElementById('app'));
+        app.addPart();
+    </script>
+</div>
+</body>
+</html>
